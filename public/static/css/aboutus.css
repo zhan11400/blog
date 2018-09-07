@@ -1,0 +1,47 @@
+/**
+ *
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-04 09:36:59
+ * @version $Id$
+ */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 780px;
+
+  background-position: top center; }
+  .desc {
+    position: absolute;
+bottom: 27px;
+font-size: 20px;
+color: #000;
+left: 0;
+right: 0;
+text-align: center;
+  }
+  .banner .banner-w h3{
+    display: none;
+    padding-top: 200px;
+    font-size: 34px;
+    color: #ffffff;
+    text-align: left;
+    -webkit-animation:fadeIn 1s 0.5s ease both;
+       -moz-animation:fadeIn 1s 0.5s ease both;
+        -ms-animation:fadeIn 1s 0.5s ease both;
+         -o-animation:fadeIn 1s 0.5s ease both;
+            animation:fadeIn 1s 0.5s ease both; }
+
+.introduce {
+  padding: 70px 0 118px 0; text-align: center; }
+  .introduce p {
+
+    line-height: 32px;
+    font-size: 14px;
+    color: #8d8d8d;
+    text-align: center;}
+
+     .introduce h3{ font-size: 36px;
+    padding: 42px 0 26px;font-weight: 500;}
+
+.introduce .col-710{ width: 710px;margin: 0 auto;
+    position: relative;}

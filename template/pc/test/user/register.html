@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>用户注册</title>
+<link type="text/css" rel="stylesheet" href="__STATIC__/css/normalize.css" />
+<link type="text/css" rel="stylesheet" href="__STATIC__/css/demo.css" />
+<!--必要样式-->
+<link type="text/css" rel="stylesheet" href="__STATIC__/css/component.css" />
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="container demo-1">
+	<div class="content">
+		<div id="large-header" class="large-header">
+			<canvas id="demo-canvas"></canvas>
+			<div class="logo_box">
+				<h3>欢迎注册</h3>
+				<form action="#" name="f" method="post">
+					<div class="input_outer">
+						<span class="u_user"></span>
+						<input name="logname" class="text" id="phone" style="color: #FFFFFF !important" type="text" placeholder="请输入账户">
+					</div>
+					<div class="input_outer">
+						<span class="us_uer"></span>
+						<input name="logpass" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
+						<input type="button" class="button" data-id="1" value="发送验证码">					</div>
+					<div class="input_outer">
+						<span class="us_uer"></span>
+						<input name="logpass" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
+					</div>
+					<div class="input_outer">
+						<span class="us_uer"></span>
+						<input name="logpass" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请再次输入密码">
+					</div>
+						 <div class="input_outer">
+                <input type="text" style="width:105px;color: #FFFFFF !important" name="verify_code" id="verify_code" class="text" value="" placeholder="请输入验证码"/>
+                <img  style="height:43px;width:138px;float:right;border-radius:0 50px 50px 0" id="verify_code_img" src="{:U('User/verify',array('type'=>'user_reg'))}" />
+            </div>
+					<div class="mb2"><a class="act-but submit" href="javascript:;" style="color: #FFFFFF">注册</a></div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<style>
+.tip{position:absolute;bottom:10%;z-index:999;background:none;width:100%;}
+.tip .show{width:80%;margin:0 auto;text-align:center;line-height:40px}
+</style>
+<div class="tip">
+   <div class="show">注册成功</div>
+</div>
+<script type="text/javascript" src="__STATIC__/js/jq.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/TweenLite.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/EasePack.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/rAF.js"></script>
+<script type="text/javascript" src="__STATIC__/js/demo-1.js"></script>
+<script>
+   $("#verify_code_img").click(function(){
+        $('#verify_code_img').attr('src','/home/User/verify/type/user_reg/r/'+Math.random());
+    })
+$(".button").click(function(){
+	if($(this).data('id')==1){
+			var numbers = /^1\d{10}$/;
+			var phone = $('#phone').val().replace(/\s+/g,""); //获取输入手机号码
+			alert(phone);
+				if(!numbers.test(phone) || phone.length ==0){
+					alert("手机格式错误");
+					return false;
+				}
+			if(numbers.test(phone)){
+				var time = 30;
+				$('.button').data('id',2);
+				function timeCountDown(){
+					if(time==0){
+						clearInterval(timer);
+						$('.button').data('id',1);
+						return true;
+					}
+					$('.button').val(time+"S后再次发送");
+					time--;
+					return false;
+					sends.checked = 0;
+				}
+				timeCountDown();
+				var timer = setInterval(timeCountDown,1000);
+			}
+		}
+	});
+
+	</script>
+</body>
+</html>

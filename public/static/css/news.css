@@ -1,0 +1,41 @@
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-04 13:23:27
+ * @version $Id$
+ */
+.content {
+  padding: 140px 0 100px;
+  background: #f5f5f5; }
+
+.cont {
+  background: #fff;
+  padding: 50px 58px 60px; }
+  .cont .time {
+    font-size: 14px;
+    color: #707070; }
+  .cont h4 {
+    padding-top: 40px;
+    font-size: 30px;
+    color: #333333;
+    font-weight: 500; }
+  .cont h3 {
+    padding-bottom: 40px;
+    font-size: 30px;
+    color: #8d8d8d;
+    font-weight: 300;
+    border-bottom: 1px solid #e5e5e5; }
+  .cont p {
+    padding-top: 26px;
+    line-height: 30px;
+    color: #666666;
+    font-size: 14px; }
+  .cont img {
+    padding: 20px 0; }
+  .cont .post-w {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #999999; }
+    .content h5{    margin-top: 20px;
+    font-size: 20px;}

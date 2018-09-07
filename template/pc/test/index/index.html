@@ -1,0 +1,144 @@
+<include file="public/header" />
+
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-8 column">
+			<div class="carousel slide" id="carousel-671904">
+				<ol class="carousel-indicators">
+				<foreach name="banner" item="vo" key="k">
+				
+					<li	data-slide-to="{$k}" data-target="#carousel-671904" <if condition="$k eq 0"> class="active" </if>  >
+					</li>
+				</foreach>
+				</ol>
+				<div class="carousel-inner">
+				<foreach name="banner" item="vo" key="k">
+					<div class="item <if condition="$k eq 0"> active </if>">
+						<a <if condition='$vo.ad_link'> href="{$vo.ad_link}" target="_blank" </if>>
+						<img alt="{$vo.ad_name}" title="{$vo.ad_name}" src="{$vo.ad_code}" />
+						</a>
+
+					</div>
+				</foreach>
+			
+				</div> <a class="left carousel-control" href="#carousel-671904" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-671904" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+			</div>
+		</div>
+		<div class="col-md-4 column">
+			<div class="box ui-draggable" id="mainBox">
+				<div class="mHd">
+
+					<h4>
+						<span>最热文章</span>
+					</h4>
+				</div>
+				<div class="mBd">
+					<ol class="newsList">
+
+						<foreach name="scan" item="vo">
+							<li>
+								<a href="{:url('lists/detail',array('cid'=>$vo['cat_id'],'id'=>$vo['id']))}">{$vo.title|getSubstr=0,22}</a> <em>{$vo.count}</em>
+							</li>
+						</foreach>
+											</ol>
+				</div>
+			</div>
+			
+		</div>
+
+	</div>
+</div>
+<HR width="90%" SIZE=10 />
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-8 column">
+
+			<div class="row">
+					<foreach name="recommand" item="vo" key="k">	
+			<div class="col-md-4">
+
+
+						<div class="caption">
+							<a href="{:U('lists/detail',array('cid'=>$vo['cat_id'],'id'=>$vo['id']))}"><h4>
+								{$vo.title}	
+						</h4></a>
+					
+			<if condition="$vo.labelname">
+			<foreach name="vo.labelname" item="id" key="key">	
+			 <span class="label label-{$id.css}">{$id.title}</span>
+			</foreach>
+			</if>
+			 							<p class="ptag">
+								{$vo.createtime}							</p>
+							<p>
+								<a class="btn btn-primary" href="{:U('lists/detail',array('cid'=>$vo['cat_id'],'id'=>$vo['id']))}">浏览</a>
+							</p>
+						</div>
+				</div>
+				</foreach>
+			</div>
+
+		</div>
+			<div class="col-md-4 column">
+			<div class="box ui-draggable" id="mainBox">
+				<div class="mHd">
+
+					<h4>
+						<span>最新文章</span>
+					</h4>
+				</div>
+				<div class="mBd">
+					<ol class="newsList">
+					<foreach name="new" item="vo">
+						<li>
+							 <a href="{:url('lists/detail',array('cid'=>$vo['cat_id'],'id'=>$vo['id']))}">{$vo.title|getSubstr=0,22}</a> <em>{$vo.count}</em>
+						</li>
+						</foreach>
+											</ol>
+				</div>
+			</div>
+			
+		</div>
+			<div class="col-md-4 column">
+			<div class="box ui-draggable" id="mainBox">
+				<div class="mHd">
+
+					<h4>
+						<span>二维码</span>
+					</h4>
+				</div>
+				<div class="mBd">
+					<ol class="newsList" style="list-style: none">
+						<li style="text-align: center">
+						<img style="max-width:90%" src="http://shop.zhan666.cn/template/pc/default/static/images/app.jpg" alt="企鹅号">
+						</li>
+						<li style="text-align: center">
+						<img style="max-width:90%" src="http://shop.zhan666.cn/template/pc/default/static/images/toutiao.jpeg" alt="企鹅号">
+						</li>
+					</ol>
+				</div>
+			</div>
+			
+		</div>
+		<div class="col-md-4 column">
+			<div class="box ui-draggable" id="mainBox">
+				<div class="mHd">
+
+					<h4>
+						<span>标签</span>
+					</h4>
+				</div>
+				<div class="mBd">
+					<ol class="newsList">
+						<foreach name="label" item="id" key="key">
+							<a href="{:url('lists/index',array('label_id'=>$id['id']))}" style="{$id['style']}"><label>{$id.title}</label></a>
+						</foreach>
+					</ol>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>		
+<include file="public/footer" />

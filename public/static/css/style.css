@@ -1,0 +1,85 @@
+.tag{
+	display: block;
+	margin:20px 0 20px 0;
+}
+#footer{
+	text-align: center;
+}
+.title {
+    text-align: center;
+    color: #f60;
+    font: normal 22px/32px "Microsoft YaHei";
+}
+.articleContent .property, .articleContent .userControl {
+    margin: 10px 0 20px 0;
+    text-align: center;
+    line-height: 22px;
+    padding: 2px 10px;
+    background: #F9FBFB;
+    border: 1px dashed #C8DDE4;
+    color: #999;
+}
+.articleContent #contentTxt p {
+    margin-bottom: 20px;
+    color: #333;
+    text-indent: 2em;
+}
+#header .logo {
+    height: 70px;
+    line-height: 70px;
+    font-size: 24px;
+    color: #06c;
+    text-shadow: 1px 1px rgba(0,0,0,.3);
+}
+#header .topAD {
+    float: right;
+    height: 70px;
+    line-height: 70px;
+    font-size: 14px;
+    color: #08a;
+}
+dd{
+	margin: 10px 0 10px 0;
+}
+.textarea{
+	height: 500px;
+	width: 500px;
+}
+h4{
+	color:black;
+}
+#mainBox .mHd {
+    border-bottom: 2px solid #09c;
+    height: 30px;
+    line-height: 30px;
+}
+#mainBox .path {
+    float: left;
+}
+.path {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.newsList li{
+	margin:10px 0 10px 0;
+}
+#box{
+	float:right;
+	color:red;
+	font-family: "微软雅黑";
+}
+.page{
+	text-align: center;
+}
+.ptag{
+	margin-top:5px;
+}
+ol em {
+	float:right;
+	padding-right:20px ;
+	color:#3C3C3C;
+}
+.caption a:hover{
+	text-decoration: none;
+}

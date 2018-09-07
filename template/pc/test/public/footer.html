@@ -1,0 +1,21 @@
+<div class="container">
+			<div class="row clearfix">
+				<div class="col-md-12 column">
+					<div id="footer">
+<div class="panel-footer">
+<p>
+<foreach name="friendlink" item="vo">
+[<a <if condition="$vo.target eq 1">target="_blank" </if><if condition="$vo.link_url"> href="{$vo.link_url}"</if>>{$vo.link_name}</a>]
+</foreach>
+</p>
+<div class="copyRight">{$tpshop_config['shop_info_record_no']}</div>
+<div class="copyRight">{$tpshop_config['shop_info_email']}</div>
+</div>
+						
+					</div>
+					
+				</div>
+			</div>
+</div>
+	</body>
+</html>	

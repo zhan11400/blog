@@ -1,0 +1,95 @@
+/**
+ *
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-04 14:34:41
+ * @version $Id$
+ */
+.banner {
+  width: 100%;
+  height: 880px;
+  position: relative;
+  background-position: top center; }
+  .anchor {
+    position: absolute;
+    width: 1140px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .phone {
+    position: absolute;
+    background-size: 100%;
+    width:70%;
+    height: 750px;
+    left:15%;
+    top: 195px;
+  }
+  .banner-title{
+    position: absolute;
+    top: 346px;
+    left: 170px;
+  }
+  .banner-title h3{
+    font-size: 36px;
+    color: #e9e7e5;
+    font-weight: 300;
+  }
+  .banner-title p{
+    font-size: 18px;
+    color: #e6e5e3;
+    font-weight: 300;
+  }
+  .banner-down{
+    position: absolute;
+    top:630px;
+    left: 232px;
+    font-size: 12px;
+    color: #cdccc5;
+  }
+  .banner-title
+.introduce {
+  padding-bottom: 110px; }
+  .introduce .title {
+    padding: 50px 0;
+    font-weight: 500;
+    font-size: 30px;
+    text-align: center;
+    color: #333333; }
+  .introduce .steps-warp {
+    font-size: 0;
+    margin-bottom: 112px; }
+    .introduce .steps-warp li {
+      width: 300px;
+      margin-right: 120px;
+      display: inline-block;
+      opacity: 0; }
+      .introduce .steps-warp li:last-child {
+        margin-right: 0; }
+      .introduce .steps-warp li.fain {
+        -webkit-animation:fadeIn 1s 0.2s ease both;
+           -moz-animation:fadeIn 1s 0.2s ease both;
+            -ms-animation:fadeIn 1s 0.2s ease both;
+             -o-animation:fadeIn 1s 0.2s ease both;
+                animation:fadeIn 1s 0.2s ease both; }
+      .introduce .steps-warp li img {
+        width: 100%;
+        margin-bottom: 20px; }
+      .introduce .steps-warp li h3 {
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 18px;
+        color: #333333;
+        font-weight: 500; }
+        .introduce .steps-warp li h3 em{
+          font-style: normal;
+          font-size: 22px;
+          vertical-align: text-bottom;
+          line-height: 27px;
+        }
+      .introduce .steps-warp li p {
+        line-height: 30px;
+        font-size: 14px;
+        color: #333333;
+        text-align: center;
+        opacity: 0.6; }

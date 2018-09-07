@@ -1,0 +1,81 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-12-04 09:59:50
+ * @version $Id$
+ */
+.content {
+  background: #f5f5f5; }
+
+.banner {
+  width: 100%;
+  height: 780px;
+
+  background-position: top center;
+  display: table; }
+  .banner h3{
+     padding-top: 40px;
+    font-size: 60px;
+    color: #ffffff;
+    text-align: center;
+    display:table-cell;
+    vertical-align: middle;
+    -webkit-animation:fadeIn 1s 0.5s ease both;
+       -moz-animation:fadeIn 1s 0.5s ease both;
+        -ms-animation:fadeIn 1s 0.5s ease both;
+         -o-animation:fadeIn 1s 0.5s ease both;
+            animation:fadeIn 1s 0.5s ease both;}
+.introduce {
+  padding: 96px 0 120px 0; }
+  .introduce .s-spirit {
+    padding: 0;
+    line-height: 32px;
+    font-size: 14px;
+    color: #4b4b4b;
+    text-align: center; }
+  .introduce .s-title {
+    padding: 76px 0 0 0;
+    color: #555555;
+    font-size: 36px;
+    font-weight: 500;
+    text-align: center; }
+  .introduce .s-car-warp {
+    margin: 10px 0 78px;
+    text-align: center; }
+  .introduce .s-carcount {
+    height: 72px;
+    display: inline-block;
+    margin-bottom: 16px;
+    background: #313131;
+    border-radius: 16px;
+    box-shadow: 0 0 16px #cbcbcb; }
+    .introduce .s-carcount .num, .introduce .s-carcount .mt-number-animate {
+      line-height: 72px;
+      height: 72px;
+      /*设置数字显示高度*/
+      font-size: 36px;
+      color: #ffd900; }
+    .introduce .s-carcount .num, .introduce .s-carcount .mt-number-animate .mt-number-animate-dot, .introduce .s-carcount .mt-number-animate .mt-number-animate-dom {
+      width: 32px;
+      /*设置分割符宽度*/
+      line-height: 72px; }
+    .introduce .s-carcount .num, .introduce .s-carcount .mt-number-animate-span {
+      border-right: 1px solid #464646; }
+  .introduce .introduce-c {
+    height: 456px;
+    background: #fff; }
+    .introduce .introduce-c .int-img {
+      width: 456px; }
+    .introduce .introduce-c .int-w {
+      width: 336px;
+      padding-left: 60px; }
+      .introduce .introduce-c .int-w h3 {
+        padding: 106px 0 22px;
+        font-size: 36px;
+        color: #585858;
+        font-weight: 500; }
+      .introduce .introduce-c .int-w .s-spirit {
+        line-height: 22px;
+        text-align: left;
+        padding-bottom: 10px; }

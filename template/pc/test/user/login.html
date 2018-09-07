@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title>用户登录</title>
+<link type="text/css" rel="stylesheet" href="__STATIC__/css/normalize.css" />
+<link type="text/css" rel="stylesheet" href="__STATIC__/css/demo.css" />
+<!--必要样式-->
+<link type="text/css" rel="stylesheet" href="__STATIC__/css/component.css" />
+<!--[if IE]>
+<script src="js/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<div class="container demo-1">
+	<div class="content">
+		<div id="large-header" class="large-header">
+			<canvas id="demo-canvas"></canvas>
+			<div class="logo_box">
+				<h3>欢迎登录</h3>
+				<form action="#" name="f" method="post">
+					<div class="input_outer">
+						<span class="u_user"></span>
+						<input name="logname" class="text" style="color: #FFFFFF !important" type="text" placeholder="请输入账户">
+					</div>
+					<div class="input_outer">
+						<span class="us_uer"></span>
+						<input name="logpass" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
+					</div>
+					 <div class="input_outer">
+                <input type="text" style="width:105px;color: #FFFFFF !important" name="verify_code" id="verify_code" class="text" value="" placeholder="请输入验证码"/>
+                <img  style="height:43px;width:138px;float:right;border-radius:0 50px 50px 0" id="verify_code_img" src="{:U('User/verify')}" />
+            </div>
+					<div class="mb2"><a class="act-but submit" href="javascript:;" style="color: #FFFFFF">登录</a></div>
+					
+				  <div class="signup-find p">
+					<div class="note fl">
+					 <span class="us_reg"></span>
+						<a  class="a_for" href="{:U('User/register')}"><span>快速注册</span></a>
+					</div>
+					<div class="note fr">
+					   <span class="us_for"></span>
+						<a class="a_for" href="{:U('User/forget')}"><span>找回密码</span>
+				   </div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="__STATIC__/js/TweenLite.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/EasePack.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/rAF.js"></script>
+<script type="text/javascript" src="__STATIC__/js/demo-1.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jq.min.js"></script>
+<script>
+    $("#verify_code_img").click(function(){
+        $('#verify_code_img').attr('src','/home/User/verify/r/'+Math.random());
+    })
+
+</script>
+</body>
+</html>

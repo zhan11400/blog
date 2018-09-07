@@ -1,0 +1,58 @@
+<include file="public/header" />
+<META NAME="SUBJECT" CONTENT="{$info.title}">
+<META NAME="AUTHOR" CONTENT="{$info.title}">
+<div class="container">
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-8 column">
+			<div class="articleContent">
+				<h2 class="title">
+					{$info.title}				</h2>
+				<div class="property">
+					 <span>发布时间：{$info.createtime}		</span> <span>浏览次数：{$info.count}	</span> 
+				</div>
+								<div class="property">
+			<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</div>
+			</div>
+				<div id="contentTxt">
+
+					{$info.content}
+
+				</div>
+				<h2 class="datalabel">
+						<span class="bname">标签：</span>
+					</h2>
+				<div class="labell">
+				<foreach name="info.labelname" item="vo" >
+					 <span class="label label-{$vo.css}">{$vo.title}</span>
+				</foreach>
+				</div>
+
+			
+		</div>
+		<div class="col-md-4 column">
+		<!-- 	<div class="box ui-draggable" id="mainBox">
+				<div class="mHd">
+
+					<h4>
+						<span>最热文章</span>
+					</h4>
+				</div>
+				<div class="mBd">
+					<ol class="newsList">
+						<li>
+							 <a href="index.php?control=article&action=article&id=1">我的php学习之路</a> <em>点击次数：348</em>
+						</li>
+				
+											</ol>
+				</div>
+			</div> -->
+			
+		</div>
+	</div>
+</div>
+</div>
+
+<include file="public/footer" />

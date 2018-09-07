@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+   <title>{$tpshop_config[shop_info_store_name]}</title>
+    <meta name="description" content="{$tpshop_config['shop_info_store_desc']}" />
+    <meta name="keywords" content="{$tpshop_config['shop_info_store_keyword']}" />
+    <link type="text/css" href="__PUBLIC__/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="__PUBLIC__/dist/css/style.css" rel="stylesheet">
+	<script type="text/javascript" src="__PUBLIC__/dist/js/jq.min.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/dist/js/bootstrap.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<META NAME="SUBJECT" CONTENT="{$tpshop_config['shop_info_store_title']}">
+	<META NAME="AUTHOR" CONTENT="{$tpshop_config['shop_info_store_title']}">
+	<META NAME="COPYRIGHT" CONTENT="{$tpshop_config['shop_info_record_no']}">
+</head>
+<body>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div id="header">
+				<div class="topAD">
+					专业、专注、专心
+				</div>
+				<div class="logo">
+					<img src="{$tpshop_config['shop_info_store_logo']}" />
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>	
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">切换导航</span><span class="icon-bar"></span>
+						 <span class="icon-bar"></span><span class="icon-bar"></span></button>
+					<a class="navbar-brand" href="/">首页</a>
+
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li >	<a class="navbar-brand" href="{:url('lists/index')}">全部</a></li>
+						<foreach name="category" item="vo" key="k">
+						<li >
+							<a <if condition="$vo.id eq $cid"> style="color:#f60" </if> href="{:url('lists/index',array('cid'=>$vo['id']))}">{$vo.name}</a>
+						</li>
+						</foreach>
+					</ul>
+					<form class="navbar-form navbar-left" role="search" action="{:url('lists/index')}" method="post">
+						<div class="form-group">
+							<input type="text" class="form-control" name="keywords"/>
+						</div> 
+						<input type="submit" class="btn btn-default" value="搜索" name="submit" />
+					</form>
+				<ul class="nav navbar-nav navbar-right">
+					<!-- 	<li>
+							<a href="cv" target="_blank"  style="color:red">个人简历</a>
+						</li>						
+						<li>
+							<a href="index.php?control=login&action=login">后台登录</a>
+						</li>
+ -->
+					</ul>
+				</div>
+				
+			</nav>
+
+		</div>
+	</div>
+</div>

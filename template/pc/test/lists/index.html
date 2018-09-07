@@ -1,0 +1,77 @@
+<include file="public/header" />
+<style>
+	article {
+		border-bottom: 2px double #F3F3F3;
+		margin-bottom: 28px;
+		padding-bottom: 24px;
+		word-wrap: break-word;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
+	}
+	.entry-header {
+		margin-bottom: 20px;
+	}
+	.entry-header .entry-title {
+		font-size: 28px;
+		margin-bottom: 20px;
+	}
+	.footer.entry-meta {
+		margin-top: 24px;
+		font-size: 13px;
+		line-height: 1.846153846;
+		color: #757575;
+	}
+</style>
+<div class="container">
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+			<div class="box ui-draggable" id="mainBox">
+				<div class="mBd">
+					<div class="col-md-8 column">
+					<if condition="$list">
+						<foreach name="list" item="vo" key="k">
+					<article id="post-392" class="post-392 post type-post status-publish format-standard hentry category-go">
+						<header class="entry-header">
+							<h2 class="entry-title">
+								<a href="{:url('lists/detail',array('cid'=>$vo['cat_id'],'id'=>$vo['id']))}" title="{$vo.title}" rel="bookmark">{$vo.title}</a>
+							</h2>
+						</header><!-- .entry-header -->
+
+						<div class="entry-summary">
+							<!-- Ico nic One home page thumbnail with custom excerpt -->
+							<div class="excerpt-thumb">
+							</div>
+							<p>{$vo.content|mb_substr=0,120,'utf-8'}<span class="read-more" style="margin-left: 10px"><a href="{:url('lists/detail',array('cid'=>$vo['cat_id'],'id'=>$vo['id']))}">Read More »</a></span></p>
+						</div><!-- .entry-summary -->
+
+
+						<footer class="entry-meta">
+							<span>{$vo.createtime}  {$vo.category}: <a href="{:url('lists/index',array('cid'=>$vo['cat_id']))}" rel="category tag">Go</a></span>
+							<span></span>
+
+						</footer><!-- .entry-meta -->
+					</article>
+					</foreach>
+						<else/>
+							<li>暂无文章</li>
+
+					</if>
+				</div>
+					<div class="col-md-4 column">
+						<div class="mHd">
+
+							<h4>
+								<span>标签</span>
+							</h4>
+						</div>
+						</div>
+			</div>
+		</div>
+
+	</div>
+		<div class="page">
+			{$pager->show()}
+		</div>
+</div>
+<include file="public/footer" />
